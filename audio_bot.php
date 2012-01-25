@@ -18,7 +18,7 @@
 </head>
 <body bgcolor="#646464">
 <h2 class="titleBot">./audio_bot</h2>
-<p class="footBot">Updated every 2 hours.</p>
+<!--<p class="footBot">Updated every 2 hours.</p>-->
 <table border="1" width="1024">
 <?php include "id3.php";?>
 <?php require_once "getId3/getid3/getid3.php";?>
@@ -83,5 +83,6 @@ while ($file = readdir($handler)) {
         w.addEventListener?w.addEventListener("load",gs,false):w.attachEvent("onload",gs);
     })(window);
 </script>
+<br />
 </body>
 </html>
