@@ -20,6 +20,8 @@
 <h2 class="titleBot">./audio_bot</h2>
 <p class="footBot">Updated every 2 hours.</p>
 <table border="1" width="1024">
+<?php include "id3.php";?>
+<?php require_once "getId3/getid3/getid3.php";?>
 <?php
 $directory="./files"; 
 $sortOrder="newestFirst"; 
@@ -57,9 +59,14 @@ while ($file = readdir($handler)) {
        $j = $file_names_Array[$i]; 
        $file = $file_names[$j]; 
        $i++; 
+	//$tag = tagReader($directory . "/" . $file);
+	$full_filepath = $directory . "/" . $file;
+	$getID3 = new getID3;
+	$tag = $getID3->analyze($full_filepath);
+	getid3_lib::CopyTagsToComments($tag);
             
 		echo "<tr>";
-        echo "<td><p class=\"footBot\">" . $last_modified_str . "</p></td><td><a class=\"music_listing\" href=\"http://adhd4.me/audiobot/files/" . $file . "\">" . substr($file, 0, -4) . "</a></td><td><audio src=\"files/" . $file . "\" controls=\"controls\" preload=\"none\"></audio></td>";
+        echo "<td><p class=\"footBot\">" . $last_modified_str . "</p></td><td><a class=\"music_listing\" href=\"http://adhd4.me/audiobot/files/" . $file . "\"><b>" . $tag['comments_html']['artist'][0] . "</b>" . " - " . $tag['comments_html']['title'][0]  . "</a></td><td><audio src=\"files/" . $file . "\" controls=\"controls\" preload=\"none\"></audio></td>";
 		echo "</tr>";
    } 
 ?>
