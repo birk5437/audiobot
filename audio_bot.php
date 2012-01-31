@@ -71,6 +71,8 @@ while ($file = readdir($handler)) {
    } 
 ?>
 </table>
+<a href="http://adhd4.me/audiobot/files/audiobot_all.tar.gz" class="music_listing">Download All</a>
+<br />
 <script type="text/javascript">
     var GoSquared={};
     GoSquared.acct = "GSN-535901-V";
