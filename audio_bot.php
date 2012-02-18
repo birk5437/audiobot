@@ -30,7 +30,7 @@ $sortOrder="newestFirst";
    $handler = opendir($directory); 
     
 while ($file = readdir($handler)) {  
-       if ($file != '.' && $file != '..' && $file != "robots.txt" && $file != ".htaccess" && $file != ".DS_Store" && $file != "fixfilenames.sh"){ 
+       if ($file != '.' && $file != '..' && $file != "robots.txt" && $file != ".htaccess" && $file != ".DS_Store" && $file != "fixfilenames.sh" && $file != "audiobot_all.tar.gz"){ 
            $currentModified = filectime($directory."/".$file); 
            $file_names[] = $file; 
            $file_dates[] = $currentModified; 
@@ -66,7 +66,7 @@ while ($file = readdir($handler)) {
 	getid3_lib::CopyTagsToComments($tag);
             
 		echo "<tr>";
-        echo "<td><p class=\"footBot\">" . $last_modified_str . "</p></td><td><a class=\"music_listing\" href=\"http://adhd4.me/audiobot/files/" . $file . "\"><b>" . $tag['comments_html']['artist'][0] . "</b>" . " - " . $tag['comments_html']['title'][0]  . "</a></td><td><audio src=\"files/" . $file . "\" controls=\"controls\" preload=\"none\"></audio></td>";
+        echo "<td><p class=\"footBot\">" . $last_modified_str . "</p></td><td><p align=\"center\">" . $tag['comments_html']['genre'][0] . "</p></td><td><a class=\"music_listing\" href=\"http://adhd4.me/audiobot/files/" . urlencode($file) . "\"><b>" . $tag['comments_html']['artist'][0] . "</b>" . " - " . $tag['comments_html']['title'][0]  . "</a></td><td><audio src=\"files/" . urlencode($file) . "\" controls=\"controls\" preload=\"none\"></audio></td>";
 		echo "</tr>";
    } 
 ?>
