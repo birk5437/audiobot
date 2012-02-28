@@ -3,3 +3,4 @@ upload_to_github.sh
 *.swp
 audiobot_all.tar.gz
 audiobot_all.tar
+*.class
