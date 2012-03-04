@@ -1,6 +1,10 @@
 <html>
 <head>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.marquee.js" type="text/javascript"></script>
+<link href="css/styles_new.css" rel="stylesheet" type="text/css">
 <title>AUDIO_BOT</title>
 <script type="text/javascript">
 
@@ -14,12 +18,28 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+
 </script>
 </head>
-<body bgcolor="#646464">
+<body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">audio_bot</a>
+          <div class="nav-collapse">
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<div class="container">
 <h2 class="titleBot">./audio_bot</h2>
 <!--<p class="footBot">Updated every 2 hours.</p>-->
-<table border="1" width="1024">
+<table class="table table-border table-striped">
 <?php include "id3.php";?>
 <?php require_once "getId3/getid3/getid3.php";?>
 <?php
@@ -55,7 +75,7 @@ while ($file = readdir($handler)) {
    //Loop through dates array and then echo the list 
    foreach ($file_dates as $$file_dates){ 
        $date = $file_dates;
-       $last_modified_str= date("Y-m-d h:i:s", $date[$i]);
+       $last_modified_str= date("d M Y h:i", $date[$i]);
        $j = $file_names_Array[$i]; 
        $file = $file_names[$j]; 
        $i++; 
@@ -64,9 +84,24 @@ while ($file = readdir($handler)) {
 	$getID3 = new getID3;
 	$tag = $getID3->analyze($full_filepath);
 	getid3_lib::CopyTagsToComments($tag);
-            
+
+//<b>" . $tag['comments_html']['artist'][0] . "</b>" . " - "
+
 		echo "<tr>";
-        echo "<td><p class=\"footBot\">" . $last_modified_str . "</p></td><td><p align=\"center\">" . $tag['comments_html']['genre'][0] . "</p></td><td><a class=\"music_listing\" href=\"http://adhd4.me/audiobot/files/" . urlencode($file) . "\"><b>" . $tag['comments_html']['artist'][0] . "</b>" . " - " . $tag['comments_html']['title'][0]  . "</a></td><td><audio src=\"files/" . urlencode($file) . "\" controls=\"controls\" preload=\"none\"></audio></td>";
+        echo 
+        "<td><p class=\"footBot\">" . $last_modified_str . "</p>
+          <h5><i>" . $tag['comments_html']['genre'][0] . "</i></h5>
+        </td>" .
+        "<td><h3><div class=\"music_listing\">" .
+          "<a href=\"http://adhd4.me/audiobot/files/" . urlencode($file) . "\">" 
+              . $tag['comments_html']['title'][0]  .
+          "</a></div></h3>" .
+          "<h6>" 
+              . $tag['comments_html']['artist'][0] .
+          "</h6>" .
+        "</td>" .
+        "<td><audio src=\"files/" . urlencode($file) . "\" controls=\"controls\" preload=\"none\"></audio></td>";
+
 		echo "</tr>";
    } 
 ?>
@@ -86,5 +121,6 @@ while ($file = readdir($handler)) {
     })(window);
 </script>
 <br />
+</div>
 </body>
 </html>
