@@ -4,3 +4,5 @@ upload_to_github.sh
 audiobot_all.tar.gz
 audiobot_all.tar
 *.class
+files/
+files

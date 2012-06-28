@@ -1,0 +1,307 @@
+img.weather_map
+{
+	width:45%;
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+
+}
+
+img.weather_mixed_surface
+{
+	width: 45%;
+	
+}
+
+a
+{
+	font-family: Helvetica, sans-serif;
+	font-size: 6;
+}
+
+table.ft
+{
+	width: 100%;
+}
+
+a.lt
+{
+	display: block;
+	text-align: left;
+}
+
+a.rt
+{
+	display: block;
+	text-align: right;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #cccccc;
+}
+
+a:visited
+{
+        text-decoration: none;
+        color: #cccccc;
+}
+
+a:hover
+{
+        text-decoration: underline;
+        color: #ffffff;
+}
+
+
+
+
+div.textLabel
+{
+	width: 75%;
+	position: relative;
+	top: 0%;
+	margin-left: auto;
+	margin-right: auto;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:10px;
+	padding:0px;
+	text-transform: capitalize;
+	/*font-family: Courier, serif;*/
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	color: #999999;
+	/*color: #000000;*/
+}
+
+div.greyLabel
+{
+        font-family: sans-serif;
+        font-size: 20;
+        /*color: #999999;*/
+	color: #000000;
+	width: 60px;
+	text-align: left;
+}
+
+div.grey
+{
+	color: #999999;
+	text-align: center;
+	font-size: 8;
+	font-family: sans-serif;
+}
+
+textarea
+{
+	border: 0;
+	resize: none;
+	background-color: #dddddd;
+	font-family: sans-serif;
+}
+
+input
+{
+	font-family: sans-serif;
+}
+
+input.form_input
+{
+	border: 0;
+	background-color:#dddddd;
+}
+
+div.contact_form
+{
+	position: relative; top: 10px; left: 20px;
+}
+
+/* Container class */
+div.rounded_container{
+        /* This background color should have the same background color as your text input */
+        /* Changing this color will show you how the rounded input is laid out */
+        background-color: #fff;
+        /* This padding is between the text input and the rounded border on all sides */
+        /* Decreasing the value may interfere with the rounded corners */
+        padding: 2px;
+}
+/* Border class */		
+div.rounded_border {  
+	/* This is the color of your rounded border */
+	/*background: #6666ff; */
+	background: #bbbbbb;
+	border:0px;=
+}
+input.rounded_input{
+	border:0px;
+}
+
+img
+{
+	border: 0;
+}
+
+.tableLink
+{
+	filter: alpha(opacity=50); /* ie */
+	-moz-opacity: .5; /* mozilla */
+	font-family: sans-serif;
+	height=20px;
+	display: block;
+	text-decoration: none;
+	background-color: #999999;
+}
+
+.tableLink:hover
+{
+	background-color: #d8060f;
+	filter: alpha(opacity=50); /* ie */
+	-moz-opacity: .5; /* mozilla */
+	background:#ccc;
+}
+
+.tableLink:visited
+{
+	color: #000000;
+}
+
+.tableLink:link
+{
+	color: #000000;
+}
+
+.transparent {
+filter: alpha(opacity=50); /* ie */
+-moz-opacity: .5; /* mozilla */
+background:#ccc;
+}
+
+.imageLink {
+   position: absolute;
+   top: 50px;
+   left: 0;
+
+   color: rgba(0,0,0,0);
+}
+
+img.center
+{
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+.blank_bar
+{
+	height: 35px;
+}
+
+.centertwo
+{
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+a.center {margin-left: auto;   margin-right: auto;}
+
+.table_thumb
+{
+	width:342px;
+}
+
+.imageLink:hover {
+   visibility:visible;
+   color: white;
+   font: bold 14px/35px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+
+
+area:hover {
+   color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+
+.image {
+   position: relative;
+  /* width: 100%;*/ /* for IE 6 */
+}
+
+
+
+
+
+.imgteaser {
+	margin: 0;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+
+
+.imgteaser a:hover .desc{
+	display: block;
+	font-size: 1.2em;
+	padding: 10px 0;
+	background: #111;
+	filter:alpha(opacity=75);
+	opacity:.75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /*--IE 8 Transparency--*/
+	color: #fff;
+	position: absolute;
+	bottom: 11px;
+	left: 11px;
+	padding: 10px;
+	margin: 0;
+	width: 566px;
+	border-top: 0px solid #999;
+}
+
+.imgteaser a .desc {
+	text-decoration: none;
+	float: left;
+	display: none;
+}
+
+input.googleButton
+{
+	position: relative;
+	top: 5%;
+}
+
+input.googleText
+{
+	position: relative;
+	top: 5%;
+	width: 60%;
+}
+
+div.contact_info
+{
+	font-size: .9em;
+	font-family: sans-serif;
+	text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+    
+    position: relative;
+    left: -75px;
+    color: 777777;
+}

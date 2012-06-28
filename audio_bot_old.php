@@ -1,12 +1,11 @@
 <html>
 <head>
-<link href="assets/css/bootstrap.css" rel="stylesheet" />
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<!--<script src="assets/js/jquery.marquee.js" type="text/javascript"></script>-->
-<!--<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>-->
-<link href="css/styles_new.css" rel="stylesheet" type="text/css" />
-<title>audio_bot[music]</title>
+<script src="assets/js/jquery.marquee.js" type="text/javascript"></script>
+<link href="css/styles_new.css" rel="stylesheet" type="text/css">
+<title>AUDIO_BOT</title>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -23,7 +22,6 @@
 </script>
 </head>
 <body>
-<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -33,24 +31,15 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">audio_bot</a>
-	  <a class="pull-right" title="Share On Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.audio-bot.com&t=AudioBot%3A-%3AMusic%3AAggregator" onclick="window.open('http://www.facebook.com/sharer.php?u=http://www.audio-bot.com&t=AudioBot%3A-%3AMusic%3AAggregator', 'newWindow', 'width=816, height=523'); return false;"><img src="icn-facebook.png" style="margin-top: .5em;" /></a>
-&nbsp;
-<a class="pull-right" title="Share On Twitter" target="_blank" href="http://twitter.com/home?status=http://www.audio-bot.com&nbsp;--&nbsp;audio_bot&nbsp;(music&nbsp;aggregator)" onclick="window.open('http://twitter.com/home?status=http://www.audio-bot.com&nbsp;--&nbsp;audio_bot&nbsp;(music&nbsp;aggregator)', 'newWindow', 'width=816, height=523'); return false;"><img src="icn-twitter.png" style="margin-top: .5em; margin-right: .5em;" /></a>
           <div class="nav-collapse">
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-<div class="container" width="1024px">
-<!--<h2 class="titleBot">./audio_bot</h2>-->
+<div class="container">
+<h2 class="titleBot">./audio_bot</h2>
 <!--<p class="footBot">Updated every 2 hours.</p>-->
-<div style="width: 1024px; margin-left:auto; margin-right: auto;"><img src="audiobot_1024.png" /></div>
-<div style="width: 1024px; margin-left:auto; margin-right: auto;">
-<?php 
-echo "<?php include \"http://dilutionofprecision.com/ads.php\"?>";
-?>
-</div>
-<table class="table table-border table-striped" style="width: 1024px; margin-left:auto; margin-right:auto;">
+<table class="table table-border table-striped">
 <?php include "id3.php";?>
 <?php require_once "getId3/getid3/getid3.php";?>
 <?php
@@ -104,20 +93,20 @@ while ($file = readdir($handler)) {
           <h5><i>" . $tag['comments_html']['genre'][0] . "</i></h5>
         </td>" .
         "<td><h3><div class=\"music_listing\">" .
-          "<a href=\"files/" . urlencode($file) . "\">" 
+          "<a href=\"http://adhd4.me/audiobot/files/" . urlencode($file) . "\">" 
               . $tag['comments_html']['title'][0]  .
           "</a></div></h3>" .
           "<h6>" 
               . $tag['comments_html']['artist'][0] .
           "</h6>" .
-        "</td>";
-//        "<td><audio src=\"files/" . urlencode($file) . "\" controls=\"controls\" preload=\"none\"></audio></td>";
+        "</td>" .
+        "<td><audio src=\"files/" . urlencode($file) . "\" controls=\"controls\" preload=\"none\"></audio></td>";
 
 		echo "</tr>";
    } 
 ?>
 </table>
-<!--<a href="http://adhd4.me/audiobot/files/audiobot_all.tar.gz" class="music_listing">Download All</a>-->
+<a href="http://adhd4.me/audiobot/files/audiobot_all.tar.gz" class="music_listing">Download All</a>
 <br />
 <script type="text/javascript">
     var GoSquared={};
@@ -133,8 +122,5 @@ while ($file = readdir($handler)) {
 </script>
 <br />
 </div>
-<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
-        type="text/javascript">
-</script>
 </body>
 </html>
