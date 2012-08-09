@@ -32,11 +32,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">audio_bot</a>
-	  <a class="pull-right" title="Share On Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.audio-bot.com&t=AudioBot%3A-%3AMusic%3AAggregator" onclick="window.open('http://www.facebook.com/sharer.php?u=http://www.audio-bot.com&t=AudioBot%3A-%3AMusic%3AAggregator', 'newWindow', 'width=816, height=523'); return false;"><img src="icn-facebook.png" style="margin-top: .5em;" /></a>
-&nbsp;
-<a class="pull-right" title="Share On Twitter" target="_blank" href="http://twitter.com/home?status=http://www.audio-bot.com&nbsp;--&nbsp;audio_bot&nbsp;(music&nbsp;aggregator)" onclick="window.open('http://twitter.com/home?status=http://www.audio-bot.com&nbsp;--&nbsp;audio_bot&nbsp;(music&nbsp;aggregator)', 'newWindow', 'width=816, height=523'); return false;"><img src="icn-twitter.png" style="margin-top: .5em; margin-right: .5em;" /></a>
-          <div class="nav-collapse">
+          <a class="brand" href="#">AudioBot</a>
+          <p class="navbar-text">An automatic Mp3 aggregator.</p>          
+	  <div class="nav-collapse">
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -46,9 +44,6 @@
 <!--<p class="footBot">Updated every 2 hours.</p>-->
 <div style="width: 1024px; margin-left:auto; margin-right: auto;"><img src="audiobot_1024.png" /></div>
 <div style="width: 1024px; margin-left:auto; margin-right: auto;">
-<?php 
-echo "<?php include \"http://dilutionofprecision.com/ads.php\"?>";
-?>
 </div>
 <table class="table table-border table-striped" style="width: 1024px; margin-left:auto; margin-right:auto;">
 <?php include "id3.php";?>
