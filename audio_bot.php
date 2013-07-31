@@ -23,7 +23,7 @@
 </script>
 </head>
 <body>
-<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+<script type="text/javascript" src="./yahoo_web_player.js"></script>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
